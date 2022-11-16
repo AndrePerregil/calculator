@@ -1,0 +1,39 @@
+.label {
+  color: gray;
+  font-size: 14px;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 68px;
+}
+
+.input {
+  padding: 0.5rem 2rem;
+  border: 1px solid lightgray;
+}
+.input:focus {
+  outline: none;
+  border: 1px solid royalblue;
+  box-shadow: 0 0 2px royalblue;
+}
+
+.description {
+  color: gray;
+  font-size: 12px;
+}
+
+.financialIcon {
+  color: black;
+  font-weight: bold;
+
+  left: 0.5rem;
+  bottom: 2.2rem;
+
+  transform: translateY(-50%);
+  position: relative;
+  width: fit-content;
+}

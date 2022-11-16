@@ -9,12 +9,22 @@
   align-items: center;
   box-sizing: border-box;
 
-  padding: 5%;
+  padding: 10%;
   gap: 5%;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .title {
-  color: gray;
+  color: rgba(0, 0, 0, 0.6);
   font-size: 22px;
   text-align: center;
 }
