@@ -8,14 +8,28 @@
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-  max-height: 68px;
+  height: 25%;
+}
+
+.inputFinantial {
+  padding: 0.5rem 2rem;
+  border: 1px solid lightgray;
+  transition: 0.3s;
+  cursor: pointer;
+
+  font-weight: bold;
 }
 
 .input {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0.5rem;
   border: 1px solid lightgray;
+  transition: 0.3s;
+  cursor: pointer;
+
+  font-weight: bold;
 }
-.input:focus {
+.input:focus,
+.inputFinantial:focus {
   outline: none;
   border: 1px solid royalblue;
   box-shadow: 0 0 2px royalblue;

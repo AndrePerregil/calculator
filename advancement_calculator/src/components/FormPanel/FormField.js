@@ -7,8 +7,11 @@ export const FormField = ({
   type,
   description,
   financial,
+  installments,
+  mdr,
+  handleChange,
 }) => {
-  return description ? (
+  return installments ? (
     <div className={FormFieldCss.fieldContainer}>
       <label className={FormFieldCss.label}>{label}</label>
       <input
@@ -16,6 +19,9 @@ export const FormField = ({
         placeholder={placeholder}
         register={register}
         className={FormFieldCss.input}
+        onChange={(e) => {
+          handleChange("installments", e.target.value);
+        }}
       />
       <span className={FormFieldCss.description}>{description}</span>
     </div>
@@ -26,9 +32,25 @@ export const FormField = ({
         type={type}
         placeholder={placeholder}
         register={register}
-        className={FormFieldCss.input}
+        className={FormFieldCss.inputFinantial}
+        onChange={(e) => {
+          handleChange("amount", e.target.value);
+        }}
       />
       <p className={FormFieldCss.financialIcon}>R$</p>
+    </div>
+  ) : mdr ? (
+    <div className={FormFieldCss.fieldContainer}>
+      <label className={FormFieldCss.label}>{label}</label>
+      <input
+        type={type}
+        placeholder={placeholder}
+        register={register}
+        className={FormFieldCss.input}
+        onChange={(e) => {
+          handleChange("mdr", e.target.value);
+        }}
+      />
     </div>
   ) : (
     <div className={FormFieldCss.fieldContainer}>
@@ -38,7 +60,11 @@ export const FormField = ({
         placeholder={placeholder}
         register={register}
         className={FormFieldCss.input}
+        onChange={(e) => {
+          handleChange("days", e.target.value.split(","));
+        }}
       />
+      <span className={FormFieldCss.description}>{description}</span>
     </div>
   );
 };
