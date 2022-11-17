@@ -26,7 +26,6 @@ export const FormPanel = ({ responseData, setResponseData }) => {
       data = { [field]: defaultValues.days };
     }
     setFormData({ ...formData, ...data });
-    console.log(formData);
   };
 
   useEffect(() => {
