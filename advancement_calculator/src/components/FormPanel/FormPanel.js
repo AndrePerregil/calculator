@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { FormField } from "./FormField";
+import { FormField } from "./FormField/FormField";
 import FormPanelCss from "./FormPanel.module.css";
 import { conditions } from "../../utils/requestConditions";
 
@@ -55,22 +55,26 @@ export const FormPanel = ({ responseData, setResponseData }) => {
           label={"Informe o valor da sua venda*"}
           financial={true}
           handleChange={handleChange}
+          placeholder={"1000.00"}
         />
         <FormField
           label={"Em quantas parcelas*"}
           description={"Maximo de 12 parcelas"}
           installments={true}
           handleChange={handleChange}
+          placeholder={"1"}
         />
         <FormField
           label={"Informe o percentual de MDR*"}
           handleChange={handleChange}
           mdr={true}
+          placeholder={"5"}
         />
         <FormField
           label={"Informe os dias"}
           description={"Numero inteiro, ou separados por virgula. ex: 1,15,30"}
           handleChange={handleChange}
+          placeholder={["1", "15", "30", "90"]}
         />
       </form>
     </section>

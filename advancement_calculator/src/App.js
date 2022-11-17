@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { FormField } from "./components/FormPanel/FormField";
+import { FormField } from "./components/FormPanel/FormField/FormField";
 import { FormPanel } from "./components/FormPanel/FormPanel";
 import { Container } from "./components/OuterContainer/OuterContainer";
 import { SummaryPanel } from "./components/SummaryPanel/SummaryPanel";
