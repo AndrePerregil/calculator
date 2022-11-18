@@ -21,7 +21,7 @@ export const SummaryPanel = ({ responseData }) => {
 
   return (
     <div className={SummaryPanelCss.container}>
-      <h2 className={SummaryPanelCss.title}>Você receberá:</h2>
+      <h2 className={SummaryPanelCss.title}>VOCÊ RECEBERÁ:</h2>
       {allParagraphs}
     </div>
   );
