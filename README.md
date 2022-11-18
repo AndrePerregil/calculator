@@ -33,7 +33,7 @@ Alternatively, i could have hidden a submit button that was trigerred on a key p
 
 ### `How it works`
 
-All you need to do it to clone de Repo, install dependencies and run `yarn start`, or alternatively at [Deploy](https://github.com/AndrePerregil/calculator/edit/main/README.md)</br>
+All you need to do is to clone de Repo, install dependencies with `yarn` and run the app locally with `yarn start`, or alternatively at [the deploy](https://andre-perregil-calculator-ptbr.vercel.app)</br>
 
 Fill the data, wait 4 seconds and in the summary panel you have your estimate. 
 
@@ -48,6 +48,6 @@ The Styled-components lib would have made styling easier/ more organised, i used
 Yup would be great to not only validate the user data, but to enable customised data field errors instead of the basic instructions i added to the inputs on hover/focus. There's no feedback for the user if the data used isn't valid, the request just never fires.</br>
 I really think this app needed a button, but maybe that's just me being frustrated i couldn't figure out end-to-end testing without one.<br/>
 
-##`Thank you for your time!`
+## `Thank you for your time!`
 
 
