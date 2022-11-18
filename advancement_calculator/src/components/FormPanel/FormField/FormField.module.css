@@ -11,13 +11,18 @@
   height: 25%;
 }
 
+.fieldContainerIcon {
+  height: 33px;
+}
+
 .inputFinantial {
   padding: 0.5rem 2rem;
   border: 1px solid lightgray;
   transition: 0.3s;
   cursor: pointer;
-
+  width: 100%;
   font-weight: bold;
+  box-sizing: border-box;
 }
 
 .input {
@@ -25,7 +30,8 @@
   border: 1px solid lightgray;
   transition: 0.3s;
   cursor: pointer;
-
+  box-sizing: border-box;
+  width: 100%;
   font-weight: bold;
 }
 .input:focus,
@@ -35,9 +41,18 @@
   box-shadow: 0 0 2px royalblue;
 }
 
+input:focus ~ .description {
+  display: block;
+}
+
+.fieldContainer:hover > span {
+  display: block;
+}
 .description {
+  display: none;
   color: gray;
   font-size: 12px;
+  margin-top: 0;
 }
 
 .financialIcon {
@@ -46,6 +61,7 @@
 
   left: 0.5rem;
   bottom: 2.2rem;
+  margin: none;
 
   transform: translateY(-50%);
   position: relative;

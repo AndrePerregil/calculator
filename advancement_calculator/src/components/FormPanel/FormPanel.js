@@ -14,10 +14,7 @@ export const FormPanel = ({ responseData, setResponseData }) => {
   };
 
   const [formData, setFormData] = useState({
-    amount: 0,
-    installments: 0,
-    mdr: 0,
-    days: [1, 15, 30, 90],
+    ...defaultValues,
   });
 
   const handleChange = (field, value) => {
@@ -53,26 +50,28 @@ export const FormPanel = ({ responseData, setResponseData }) => {
       <form className={FormPanelCss.form}>
         <FormField
           label={"Informe o valor da sua venda*"}
+          description={"Inteiro ou float, minimo 1000 ou 1000.00"}
           financial={true}
           handleChange={handleChange}
           placeholder={"1000.00"}
         />
         <FormField
           label={"Em quantas parcelas*"}
-          description={"Maximo de 12 parcelas"}
+          description={"Inteiro, minimo 1, maximo 12"}
           installments={true}
           handleChange={handleChange}
           placeholder={"1"}
         />
         <FormField
           label={"Informe o percentual de MDR*"}
+          description={"Inteiro, minimo 0 maximo 100"}
           handleChange={handleChange}
           mdr={true}
           placeholder={"5"}
         />
         <FormField
           label={"Informe os dias"}
-          description={"Numero inteiro, ou separados por virgula. ex: 1,15,30"}
+          description={"Inteiro, ou inteiros separados por virgula."}
           handleChange={handleChange}
           placeholder={["1", "15", "30", "90"]}
         />
